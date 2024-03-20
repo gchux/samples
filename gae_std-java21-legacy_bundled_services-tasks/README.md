@@ -6,6 +6,6 @@ https://github.com/GoogleCloudPlatform/java-docs-samples/tree/main/appengine-jav
 
 ```sh
 ./mvnw clean package appengine:deploy
-gcloud app deploy dispatch.yaml
-gcloud app deploy queue.yaml
+gcloud app deploy src/main/appengine/dispatch.yaml
+gcloud app deploy src/main/appengine/queue.yaml
 ```
