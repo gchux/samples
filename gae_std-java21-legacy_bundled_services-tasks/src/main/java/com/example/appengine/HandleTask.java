@@ -26,12 +26,8 @@ import com.google.appengine.api.taskqueue.Queue;
 import com.google.appengine.api.taskqueue.QueueFactory;
 import com.google.appengine.api.taskqueue.TaskOptions;
 
-import java.util.concurrent.atomic.AtomicLong;
-
 @WebServlet(name = "HandleTask", value = "/task/handle")
 public class HandleTask extends HttpServlet {
-
-  private static final AtomicLong counter = new AtomicLong(0l);
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
