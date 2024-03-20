@@ -28,7 +28,7 @@ gcloud app deploy src/main/appengine/queue.yaml
 ## Add tasks to the Queue
 
 ```sh
-curl -ivL -XGET http://<gae-service>-dot-<gcp-project>.appspot.com/task/push
+curl -ivL -XGET https://<gae-service>-dot-<gcp-project>.appspot.com/task/push
 ```
 
 > see [handler implementation](src/main/java/com/example/appengine/PushTask.java)
