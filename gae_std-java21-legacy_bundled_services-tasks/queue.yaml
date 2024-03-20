@@ -1,0 +1,3 @@
+queue:
+- name: gae-task-q
+  rate: 1/s
