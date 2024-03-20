@@ -15,11 +15,15 @@ https://cloud.google.com/sdk/docs/install
 gcloud app deploy src/main/appengine/dispatch.yaml
 ```
 
+> see [routing rules](src/main/appengine/dispatch.yaml)
+
 ## Deploy GAE Task Queue 
 
 ```sh
 gcloud app deploy src/main/appengine/queue.yaml
 ```
+
+> see [queue config](src/main/appengine/queue.yaml)
 
 ## Add tasks to the Queue
 
