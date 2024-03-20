@@ -26,3 +26,11 @@ gcloud app deploy src/main/appengine/queue.yaml
 ```sh
 curl -ivL -XGET http://<gae-service>-dot-<gcp-project>.appspot.com/task/push
 ```
+
+---
+
+## REFERENCES
+
+- https://cloud.google.com/appengine/docs/standard/java-gen2/runtime
+- https://cloud.google.com/sdk/gcloud/reference/app/deploy
+- https://cloud.google.com/appengine/docs/standard/java/maven-reference
