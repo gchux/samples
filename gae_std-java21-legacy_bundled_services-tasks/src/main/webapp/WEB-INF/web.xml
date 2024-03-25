@@ -1,4 +1,5 @@
 <web-app> 
+  <!--
   <security-role> 
     <role-name>admin</role-name> 
   </security-role> 
@@ -11,6 +12,7 @@
       <role-name>admin</role-name> 
     </auth-constraint> 
   </security-constraint> 
+  -->
 
   <servlet>
     <servlet-name>PushTask</servlet-name>
