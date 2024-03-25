@@ -13,7 +13,7 @@
     </user-data-constraint>
   </security-constraint>
 
-  <!-- makes it fail with 302-->
+  <!-- makes it fail with 302 -->
   <security-role> 
     <role-name>admin</role-name> 
   </security-role> 
