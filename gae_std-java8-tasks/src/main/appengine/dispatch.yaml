@@ -1,0 +1,5 @@
+dispatch:
+  - url: "*/task/*"
+    service: tasks
+  - url: "*/task-j8/*"
+    service: tasks-j8

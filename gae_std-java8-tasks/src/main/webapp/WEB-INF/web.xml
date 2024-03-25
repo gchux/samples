@@ -1,0 +1,53 @@
+<web-app> 
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>secured</web-resource-name>
+      <url-pattern>/task-j8/*</url-pattern>
+    </web-resource-collection>
+    <user-data-constraint>
+      <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+    </user-data-constraint>
+  </security-constraint>
+
+  <security-role> 
+    <role-name>admin</role-name> 
+  </security-role> 
+  <security-constraint> 
+    <web-resource-collection> 
+      <web-resource-name>admin</web-resource-name> 
+      <url-pattern>/task-j8/*</url-pattern> 
+    </web-resource-collection> 
+    <auth-constraint> 
+      <role-name>admin</role-name> 
+    </auth-constraint> 
+  </security-constraint> 
+
+  <servlet>
+    <servlet-name>Test</servlet-name>
+    <servlet-class>com.example.appengine.Test</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Test</servlet-name>
+    <url-pattern>/task-j8/test</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PushTask</servlet-name>
+    <servlet-class>com.example.appengine.PushTask</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PushTask</servlet-name>
+    <url-pattern>/task-j8/push</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>HandeTask</servlet-name>
+    <servlet-class>com.example.appengine.HandleTask</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HandeTask</servlet-name>
+    <url-pattern>/task-j8/handle</url-pattern>
+  </servlet-mapping>
+
+</web-app>
