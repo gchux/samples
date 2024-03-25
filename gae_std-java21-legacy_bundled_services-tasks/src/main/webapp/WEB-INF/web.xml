@@ -5,10 +5,28 @@
   <security-constraint> 
     <web-resource-collection> 
       <web-resource-name>admin</web-resource-name> 
-      <url-pattern>/task/*</url-pattern> 
+      <url-pattern>/task/handle</url-pattern> 
     </web-resource-collection> 
     <auth-constraint> 
       <role-name>admin</role-name> 
     </auth-constraint> 
   </security-constraint> 
+
+  <servlet>
+    <servlet-name>PushTask</servlet-name>
+    <servlet-class>com.example.appengine.PushTask</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PushTask</servlet-name>
+    <url-pattern>/task/push</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>HandeTask</servlet-name>
+    <servlet-class>com.example.appengine.HandleTask</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HandeTask</servlet-name>
+    <url-pattern>/task/handle</url-pattern>
+  </servlet-mapping>
 </web-app>
