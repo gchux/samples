@@ -21,39 +21,14 @@ limitations under the License.
   <artifactId>helloworld-servlet</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <!--
-    The parent pom defines common style checks and testing strategies for our samples.
-    Removing or replacing it should not affect the execution of the samples in anyway.
-  -->
-  <parent>
-    <groupId>com.google.cloud.samples</groupId>
-    <artifactId>shared-configuration</artifactId>
-    <version>1.2.0</version>
-  </parent>
 
-  <!-- [START gae_java11_properties] -->
   <properties>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     <failOnMissingWebXml>false</failOnMissingWebXml>
   </properties>
-  <!-- [END gae_java11_properties] -->
 
-  <!-- All dependencies are scoped as provided.
-    Dependent-jars are created and added to
-  ${project.build.directory}/appengine-staging -->
   <dependencies>
-    <!-- Dependency needs to be locally install from directory -->
-		<!-- `java-docs-samples/appengine-java11/appengine-simple-jetty-main' -->
-		<!-- See the README for more information -->
-    <!-- [START gae_java11_jetty_main_dependency] -->
-    <dependency>
-      <groupId>com.example.appengine</groupId>
-      <artifactId>simple-jetty-main</artifactId>
-      <version>1</version>
-      <scope>provided</scope>
-    </dependency>
-    <!-- [END gae_java11_jetty_main_dependency] -->
 
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -87,29 +62,6 @@ limitations under the License.
           <version>helloworld</version>
         </configuration>
       </plugin>
-
-      <!-- [START gae_java11_build] -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <version>3.6.1</version>
-        <executions>
-          <execution>
-            <id>copy</id>
-            <phase>prepare-package</phase>
-            <goals>
-              <goal>copy-dependencies</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>
-                ${project.build.directory}/appengine-staging
-              </outputDirectory>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <!-- [END gae_java11_build] -->
-
     </plugins>
   </build>
 </project>
