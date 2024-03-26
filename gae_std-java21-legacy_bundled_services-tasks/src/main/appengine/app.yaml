@@ -11,9 +11,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-# [START gae_java11_servlet_yaml]
 runtime: java21
 service: tasks
-entrypoint: 'java -cp "*" com.example.appengine.jetty.Main helloworld.war'
-# [END gae_java11_servlet_yaml]
+# entrypoint: 'java -cp "*" com.example.appengine.jetty.Main helloworld.war'
 app_engine_apis: true
