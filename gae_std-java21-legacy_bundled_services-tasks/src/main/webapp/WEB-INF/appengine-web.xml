@@ -2,12 +2,6 @@
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
   <runtime>java21</runtime>
   <service>tasks</service>
-  <threadsafe>true</threadsafe>
-  <system-properties>   <!-- run your apps on EE8 -->
-    <!--
-    <property name="appengine.use.EE8" value="true"/>
-    -->
-  </system-properties>
   <app-engine-apis>true</app-engine-apis>
   <env-variables>
     <env-var name="GAE_DISABLE_NGINX" value="true" />
