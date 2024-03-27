@@ -17,10 +17,9 @@
 package com.example.appengine;
 
 import java.io.IOException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import com.google.appengine.api.taskqueue.Queue;
 import com.google.appengine.api.taskqueue.QueueFactory;
@@ -28,7 +27,6 @@ import com.google.appengine.api.taskqueue.TaskOptions;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-@WebServlet(name = "PushTask", value = "/task/push")
 public class PushTask extends HttpServlet {
 
   private static final AtomicLong counter = new AtomicLong(0l);
