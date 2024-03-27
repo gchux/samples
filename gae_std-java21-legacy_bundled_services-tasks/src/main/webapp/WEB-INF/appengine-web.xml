@@ -3,7 +3,4 @@
   <runtime>java21</runtime>
   <service>tasks</service>
   <app-engine-apis>true</app-engine-apis>
-  <env-variables>
-    <env-var name="GAE_DISABLE_NGINX" value="true" />
-  </env-variables>
 </appengine-web-app>
