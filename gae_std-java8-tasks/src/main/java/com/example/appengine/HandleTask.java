@@ -17,6 +17,7 @@
 package com.example.appengine;
 
 import java.io.IOException;
+import java.util.Enumeration;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,10 +26,14 @@ public class HandleTask extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.setContentType("text/plain");
     try {
+      response.setContentType("text/plain");
+      final Enumeration headerNames = request.getHeaderNames();
+      while( headerNames.hasMoreElements() ) {
+        final String headerName = (String) headerNames.nextElement();
+        System.out.println("headers[" + headerName + "]: " + request.getHeader(headerName));
+      }
       final String key = request.getHeader("x-test-key");
-      System.out.println(key);
       response.getWriter().println("OK: " + key);
     } catch(Exception e) {
       e.printStackTrace(System.out);
